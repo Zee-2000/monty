@@ -131,5 +131,5 @@ void free_everything(char **args);
 
 /* free.c */
 void free_all(int all);
-
+extern data_t data = DATA_INIT;
 #endif
