@@ -72,7 +72,7 @@ void process_line(char *line, unsigned int line_number)
  */
 instruction_t check(char *opcode)
 {
-	int i = 0;
+	int G = 0;
 
 	instruction_t func[] = {
 		{"push", push},
@@ -89,14 +89,14 @@ instruction_t check(char *opcode)
 		{NULL, NULL}
 	};
 
-	while (func[i].opcode != NULL)
+	while (func[G].opcode != NULL)
 	{
-		if (strcmp(func[i].opcode, opcode) == 0)
-			return (func[i]);
-		i++;
+		if (strcmp(func[G].opcode, opcode) == 0)
+			return (func[G]);
+		G++;
 	}
 
-	return (func[i]);
+	return (func[G]);
 }
 
 /**
