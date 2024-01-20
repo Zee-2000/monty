@@ -19,13 +19,13 @@ void monty(args_t *args)
 
 	if (args->ac != 2)
 	{
-dprintf(STDERR_FILENO, USAGE);
+vprintf(STDERR_FILENO, USAGE);
 exit(EXIT_FAILURE);
 }
 data.fptr = fopen(args->av, "r");
 if (!data.fptr)
 {
-dprintf(STDERR_FILENO, FILE_ERROR, args->av);
+vprintf(STDERR_FILENO, FILE_ERROR, args->av);
 exit(EXIT_FAILURE);
 }
 while (1)
