@@ -93,7 +93,7 @@ instruction_t check(char *opcode)
 	{
 		if (strcmp(func[G].opcode, opcode) == 0)
 			return (func[G]);
-		i++;
+		G++;
 	}
 
 	return (func[G]);
